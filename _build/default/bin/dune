@@ -1,0 +1,4 @@
+(executable
+ (public_name osteroids)
+ (name main)
+ (libraries osteroids minttea spices))

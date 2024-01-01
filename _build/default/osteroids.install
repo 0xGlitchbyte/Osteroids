@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/osteroids/META"
+  "_build/install/default/lib/osteroids/dune-package"
+  "_build/install/default/lib/osteroids/opam"
+]
+bin: [
+  "_build/install/default/bin/osteroids"
+]
