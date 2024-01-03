@@ -1,4 +1,4 @@
 (lang dune 3.12)
 (name osteroids)
-(sections (lib .) (bin ../../bin))
-(files (lib (META dune-package opam)) (bin (osteroids)))
+(sections (lib .) (bin ../../bin) (doc ../../doc/osteroids))
+(files (lib (META dune-package opam)) (bin (osteroids)) (doc (README.md)))

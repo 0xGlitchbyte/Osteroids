@@ -6,3 +6,6 @@ lib: [
 bin: [
   "_build/install/default/bin/osteroids"
 ]
+doc: [
+  "_build/install/default/doc/osteroids/README.md"
+]

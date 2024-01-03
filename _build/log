@@ -1,4 +1,4 @@
-# dune build
+# dune exec osteroids
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Shared cache location: /Users/rt/.cache/dune/db
@@ -19,4 +19,4 @@
 #        }
 #  ; instrument_with = []
 #  }
-$ /Users/rt/.opam/default/bin/ocamlc.opt -config > /var/folders/3w/hsg6clw93p5cmffwmjw3vprw0000gn/T/dune_94a3a6_output
+$ /Users/rt/.opam/default/bin/ocamlc.opt -config > /var/folders/3w/hsg6clw93p5cmffwmjw3vprw0000gn/T/dune_d8353f_output
