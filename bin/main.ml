@@ -5,8 +5,8 @@ let floor = " "
 let init _ = Command.Seq [Enter_alt_screen; Command.Hide_cursor]
 
 module Tilemap = struct
-  let w = 80
-  let h = 40
+  let w = 75
+  let h = 30
 
   let bg = 
     let bg = Array.make_matrix h w floor in  
@@ -65,7 +65,25 @@ let update event model =
       let ship_pos = 
         let x, y = model.ship_pos in 
         (x, Int.max 0 (y-1)) in 
-      ({model with ship_pos}, Command.Noop)
+      ({model with ship_pos; ship = "^"}, Command.Noop)
+  | Event.KeyDown (Key "s") -> 
+      let ship_pos = 
+        let x, y = model.ship_pos in 
+        (x, Int.min (Tilemap.h - 1)(y + 1))
+      in 
+      ({ model with ship_pos; ship = "v"}, Command.Noop)
+  | Event.KeyDown (Key "a") -> 
+      let ship_pos = 
+        let x, y = model.ship_pos in 
+        (Int.max 0 (x -1 ), y)
+      in 
+      ({model with ship_pos; ship = "<"}, Command.Noop)
+  | Event.KeyDown ( Key "d") ->
+      let ship_pos = 
+        let x, y = model.ship_pos in 
+        (Int.min (Tilemap.w - 1)(x + 1), y)
+      in 
+      ({model with ship_pos; ship = ">"}, Command.Noop)
   | _ -> (model, Command.Noop)
 
 let dark_gray = Spices.color "245"
